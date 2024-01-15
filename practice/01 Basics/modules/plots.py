@@ -6,6 +6,7 @@ import plotly
 from plotly.subplots import make_subplots
 from plotly.offline import init_notebook_mode
 import plotly.graph_objs as go
+
 plotly.offline.init_notebook_mode(connected=True)
 
 
@@ -17,7 +18,7 @@ def plot_ts_set(ts_set, title='Input Time Series Set'):
     ----------
     ts_set : numpy.ndarrray (2d array of shape (ts_number, ts_length))
         Time series set.
-    
+
     title : str, default = 'Input Time Series Set'
         Title of plot.
     """
@@ -54,7 +55,7 @@ def plot_ts_set(ts_set, title='Input Time Series Set'):
                       legend=dict(font=dict(size=20, color='black'))
                       )
 
-    fig.show(renderer="colab")
+    fig.show()
 
 
 def plot2d(x, y, plot_title, x_title, y_title):
@@ -68,7 +69,7 @@ def plot2d(x, y, plot_title, x_title, y_title):
 
     y : numpy.ndarrray
         Values of y axis of plot.
-    
+
     plot_title : str
         Title of plot.
 
@@ -109,5 +110,5 @@ def plot2d(x, y, plot_title, x_title, y_title):
                       paper_bgcolor='rgba(0,0,0,0)',
                       width=700)
 
-    fig.show(renderer="colab")
+    fig.show()
 
